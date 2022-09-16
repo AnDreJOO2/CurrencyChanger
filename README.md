@@ -11,7 +11,7 @@ The application is used to check currency conversion.
 
 ## API
 
-The data on current currency values come from [NBP](http://api.nbp.pl/).
+The data of current currency values come from [NBP](http://api.nbp.pl/).
 
 ## Usage Example
 
