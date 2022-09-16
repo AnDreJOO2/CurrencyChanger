@@ -18,6 +18,6 @@ The data on current currency values come from [NBP](http://api.nbp.pl/).
 ![ Alt text](CurrencyApp.gif)
 
 
-Project was made in learning purposes.
+Project was made for learning purposes.
 
 Use freely.
