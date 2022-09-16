@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h2>Currency changer</h2>
+    </div>
+
+    <div class="center">
+
+        <div class="left-side">
+            <select id="currency-input" onchange="calculate()" class="form-select" aria-label="Default select example">
+                <option selected>Choose primary currency</option>
+                <tr th:each="rate : ${rate_list}">
+                    <option th:text="| ${rate.getCurrency()} : ${rate.getMid()} Zł|"
+                            th:value="${rate.getMid()}"></option>
+                </tr>
+            </select>
+        </div>
+
+        <div class="middle-side">
+            <div class="calculations">
+                <div class="input">
+                    <input onchange="calculate()" type="number" class="form-control" id="numbers-input"
+                           placeholder="Insert amount">
+                </div>
+                <div class="output">
+                    <input type="number" disabled placeholder="" class="form-control" id="numbers-output">
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <select id="currency-output" onchange="calculate()" class="form-select" aria-label="Default select example">
+                <option selected>Choose destination currency</option>
+                <tr th:each="rate : ${rate_list}">
+                    <option th:text="| ${rate.getCurrency()} : ${rate.getMid()} Zł|"
+                            th:value="${rate.getMid()}"></option>
+                </tr>
+            </select>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

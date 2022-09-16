@@ -1,0 +1,50 @@
+
+body{
+background-color: slategray;
+    color: white;
+}
+
+.container{
+    margin-top: 30px;
+    background-color: #6b6d6d;
+}
+
+.header{
+    text-align: center;
+    margin: 50px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.center{
+
+}
+
+.left-side{
+    width: 25%;
+    float: left;
+}
+
+.right-side{
+    width: 25%;
+    float: left;
+}
+
+.middle-side{
+    width: 50%;
+    float: left;
+}
+
+.input{
+    width: 50%;
+    float: left;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.output{
+    width: 50%;
+    float: left;
+    padding-right: 5%;
+    padding-left: 5%;
+}
