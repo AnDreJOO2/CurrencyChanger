@@ -1,4 +1,5 @@
 ## About
+
 The application is used to check currency conversion.
 
 ## Technologies
@@ -15,8 +16,9 @@ The data of current currency values come from [NBP](http://api.nbp.pl/).
 
 ## Usage Example
 
-![ Alt text](CurrencyApp.gif)
+Run the application and use it on localhost in your browser, default address is http://localhost:8080.
 
+![ Alt text](CurrencyApp.gif)
 
 Project was made for learning purposes.
 
