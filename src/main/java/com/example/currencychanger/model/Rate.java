@@ -1,32 +1,34 @@
 package com.example.currencychanger.model;
 
+import java.math.BigDecimal;
+
 public class Rate {
 
-    public String currency;
-    public String code;
-    public Double mid;
-    public Double ask;
-    public Double bid;
+    private String currency;
+    private String code;
+    private BigDecimal mid;
+    private BigDecimal ask;
+    private BigDecimal bid;
 
-    public Rate(String currency, String code, Double mid) {
+    public Rate(String currency, String code, BigDecimal mid) {
         this.currency = currency;
         this.code = code;
         this.mid = mid;
     }
 
-    public Double getAsk() {
+    public BigDecimal getAsk() {
         return ask;
     }
 
-    public void setAsk(Double ask) {
+    public void setAsk(BigDecimal ask) {
         this.ask = ask;
     }
 
-    public Double getBid() {
+    public BigDecimal getBid() {
         return bid;
     }
 
-    public void setBid(Double bid) {
+    public void setBid(BigDecimal bid) {
         this.bid = bid;
     }
 
@@ -46,15 +48,15 @@ public class Rate {
         this.code = code;
     }
 
-    public Double getMid() {
+    public BigDecimal getMid() {
         return mid;
     }
 
-    public void setMid(Double mid) {
+    public void setMid(BigDecimal mid) {
         this.mid = mid;
     }
 
     public void countMeanMid() {
-        this.mid = (this.bid + this.ask) / 2;
+        this.mid = this.bid.add(this.ask).divide(new BigDecimal(2));
     }
 }

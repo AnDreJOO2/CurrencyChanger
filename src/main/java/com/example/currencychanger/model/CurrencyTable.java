@@ -5,10 +5,10 @@ import java.util.List;
 
 public class CurrencyTable {
 
-    public String table;
-    public String no;
-    public String effectiveDate;
-    public List<Rate> rates = null;
+    private String table;
+    private String no;
+    private String effectiveDate;
+    private List<Rate> rates = null;
 
     @Override
     public String toString() {

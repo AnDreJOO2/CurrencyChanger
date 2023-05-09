@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -16,7 +17,6 @@ import java.util.Set;
 @Service
 public class NbpApiService {
 
-    private static final String API_URL = "http://api.nbp.pl/api/exchangerates/rates/a/chf/?format=json";
     private static final String API_URL_TABLE_A = "http://api.nbp.pl/api/exchangerates/tables/a/?format=json";
     private static final String API_URL_TABLE_B = "http://api.nbp.pl/api/exchangerates/tables/b/?format=json";
     private static final String API_URL_TABLE_C = "http://api.nbp.pl/api/exchangerates/tables/c/?format=json";
@@ -63,7 +63,7 @@ public class NbpApiService {
             currencyTables_B.stream().map(r -> r.getRates()).forEach(allRates::addAll);
             currencyTables_C.stream().map(r -> r.getRates()).forEach(allRates::addAll);
 
-            allRates.add(new Rate("Polski Złoty", "PLN", 1.0));
+            allRates.add(new Rate("Polski Złoty", "PLN", new BigDecimal(1)));
 
             formatCurrencyNames(allRates);
             countMidValuesIfNull(allRates);
