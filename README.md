@@ -1,6 +1,6 @@
 ## About
 
-The application is used to check currency conversion.
+The application serves to check currency conversion.
 
 ## Technologies
 
@@ -9,16 +9,23 @@ The application is used to check currency conversion.
 - Thymeleaf
 - JS
 - Gson Library
+- AssertJ
 
 ## API
 
-The data of current currency values come from [NBP](http://api.nbp.pl/).
+The current currency data is provided by [NBP](http://api.nbp.pl/).
 
 ## Usage Example
 
 Run the application and use it on localhost in your browser, default address is http://localhost:8080.
 
-![ Alt text](CurrencyApp.gif)
+![ Alt text](readme-files/CurrencyApp.gif)
+
+## Tests
+
+Service methods are covered by unit tests.
+
+![ Alt text](readme-files/tests.png)
 
 Project was made for learning purposes.
 
