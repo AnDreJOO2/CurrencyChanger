@@ -19,13 +19,13 @@ The current currency data is provided by [NBP](http://api.nbp.pl/).
 
 Run the application and use it on localhost in your browser, default address is http://localhost:8080.
 
-![ Alt text](readme-files/CurrencyApp.gif)
+![Alt text](readme-files/CurrencyApp.gif)
 
 ## Tests
 
 Service methods are covered by unit tests.
 
-![ Alt text](readme-files/tests.png)
+![Alt text](readme-files/tests.png)
 
 Project was made for learning purposes.
 
